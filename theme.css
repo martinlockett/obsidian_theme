@@ -371,3 +371,13 @@ body {
 .theme-light .markdown-rendered .callout[data-callout="error"],
 .theme-light .markdown-rendered .callout[data-callout="bug"]       { --callout-color: 168, 86, 68; }
 .theme-light .markdown-rendered .callout[data-callout="example"]   { --callout-color: 122, 104, 150; }
+
+/* ============================================================
+   Mobile — opaque tab options overlay (dark mode)
+   The dropdown list that appears over the sidebar content was
+   transparent, letting list items bleed through.
+   ============================================================ */
+.theme-dark .workspace-drawer-tab-options-list {
+  background-color: var(--brand-ink-soft);
+  border: 0.5px solid rgba(243, 238, 228, 0.10);
+}
