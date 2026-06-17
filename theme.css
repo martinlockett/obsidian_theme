@@ -210,9 +210,8 @@ body {
 .markdown-rendered a.internal-link:hover,
 .markdown-rendered a.external-link:hover {
   color: var(--text-accent-hover);
-  text-decoration: underline;
-  text-decoration-color: var(--brand-brass);
-  text-underline-offset: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--brand-brass);
 }
 
 /* Blockquotes & callouts: a brass hairline, classical voice */
