@@ -266,12 +266,12 @@ body {
 .theme-dark .markdown-rendered .callout {
   background-color: var(--brand-ink-soft);
   border: 0.5px solid rgba(243, 238, 228, 0.10);
-  border-left: 2px solid rgb(var(--callout-color));
+  border-left: 2px solid var(--callout-color);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .theme-dark .markdown-rendered .callout-title {
-  background-color: rgba(var(--callout-color), 0.12);
+  background-color: color-mix(in srgb, var(--callout-color) 12%, transparent);
   padding: 0.55em 0.9em;
 }
 .theme-dark .markdown-rendered .callout-title-inner {
@@ -280,7 +280,7 @@ body {
 }
 .theme-dark .markdown-rendered .callout-icon,
 .theme-dark .markdown-rendered .callout-icon .svg-icon {
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 .theme-dark .markdown-rendered .callout-content {
   color: var(--brand-parchment);
@@ -288,24 +288,24 @@ body {
 /* Quote callouts in dark: lean on Brass rather than a grey */
 .theme-dark .markdown-rendered .callout[data-callout="quote"],
 .theme-dark .markdown-rendered .callout[data-callout="cite"] {
-  --callout-color: 200, 154, 86;
+  --callout-color: rgb(200, 154, 86);
 }
 
 /* LIGHT — mirror the left-accent treatment for consistency */
 .theme-light .markdown-rendered .callout {
   background-color: var(--brand-parch-alt);
   border: 0.5px solid rgba(28, 43, 64, 0.10);
-  border-left: 2px solid rgb(var(--callout-color));
+  border-left: 2px solid var(--callout-color);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .theme-light .markdown-rendered .callout-title {
-  background-color: rgba(var(--callout-color), 0.10);
+  background-color: color-mix(in srgb, var(--callout-color) 10%, transparent);
   padding: 0.55em 0.9em;
 }
 .theme-light .markdown-rendered .callout[data-callout="quote"],
 .theme-light .markdown-rendered .callout[data-callout="cite"] {
-  --callout-color: 184, 132, 62;
+  --callout-color: rgb(184, 132, 62);
 }
 
 /* ------------------------------------------------------------
@@ -316,60 +316,60 @@ body {
    ------------------------------------------------------------ */
 
 /* DARK — soft tones tuned for the Ink Navy field */
-.theme-dark .markdown-rendered .callout { --callout-color: 138, 161, 158; }
+.theme-dark .markdown-rendered .callout { --callout-color: rgb(138, 161, 158); }
 .theme-dark .markdown-rendered .callout[data-callout="note"],
 .theme-dark .markdown-rendered .callout[data-callout="info"],
-.theme-dark .markdown-rendered .callout[data-callout="todo"]      { --callout-color: 110, 143, 181; }
+.theme-dark .markdown-rendered .callout[data-callout="todo"]      { --callout-color: rgb(110, 143, 181); }
 .theme-dark .markdown-rendered .callout[data-callout="abstract"],
 .theme-dark .markdown-rendered .callout[data-callout="summary"],
 .theme-dark .markdown-rendered .callout[data-callout="tldr"],
 .theme-dark .markdown-rendered .callout[data-callout="tip"],
 .theme-dark .markdown-rendered .callout[data-callout="hint"],
-.theme-dark .markdown-rendered .callout[data-callout="important"] { --callout-color: 111, 163, 154; }
+.theme-dark .markdown-rendered .callout[data-callout="important"] { --callout-color: rgb(111, 163, 154); }
 .theme-dark .markdown-rendered .callout[data-callout="success"],
 .theme-dark .markdown-rendered .callout[data-callout="check"],
-.theme-dark .markdown-rendered .callout[data-callout="done"]      { --callout-color: 126, 158, 92; }
+.theme-dark .markdown-rendered .callout[data-callout="done"]      { --callout-color: rgb(126, 158, 92); }
 .theme-dark .markdown-rendered .callout[data-callout="question"],
 .theme-dark .markdown-rendered .callout[data-callout="help"],
-.theme-dark .markdown-rendered .callout[data-callout="faq"]       { --callout-color: 200, 154, 86; }
+.theme-dark .markdown-rendered .callout[data-callout="faq"]       { --callout-color: rgb(200, 154, 86); }
 .theme-dark .markdown-rendered .callout[data-callout="warning"],
 .theme-dark .markdown-rendered .callout[data-callout="caution"],
-.theme-dark .markdown-rendered .callout[data-callout="attention"] { --callout-color: 208, 138, 74; }
+.theme-dark .markdown-rendered .callout[data-callout="attention"] { --callout-color: rgb(208, 138, 74); }
 .theme-dark .markdown-rendered .callout[data-callout="failure"],
 .theme-dark .markdown-rendered .callout[data-callout="fail"],
 .theme-dark .markdown-rendered .callout[data-callout="missing"],
 .theme-dark .markdown-rendered .callout[data-callout="danger"],
 .theme-dark .markdown-rendered .callout[data-callout="error"],
-.theme-dark .markdown-rendered .callout[data-callout="bug"]       { --callout-color: 193, 106, 87; }
-.theme-dark .markdown-rendered .callout[data-callout="example"]   { --callout-color: 151, 133, 181; }
+.theme-dark .markdown-rendered .callout[data-callout="bug"]       { --callout-color: rgb(193, 106, 87); }
+.theme-dark .markdown-rendered .callout[data-callout="example"]   { --callout-color: rgb(151, 133, 181); }
 
 /* LIGHT — deeper tones for contrast on Parchment */
-.theme-light .markdown-rendered .callout { --callout-color: 74, 99, 96; }
+.theme-light .markdown-rendered .callout { --callout-color: rgb(74, 99, 96); }
 .theme-light .markdown-rendered .callout[data-callout="note"],
 .theme-light .markdown-rendered .callout[data-callout="info"],
-.theme-light .markdown-rendered .callout[data-callout="todo"]      { --callout-color: 74, 107, 150; }
+.theme-light .markdown-rendered .callout[data-callout="todo"]      { --callout-color: rgb(74, 107, 150); }
 .theme-light .markdown-rendered .callout[data-callout="abstract"],
 .theme-light .markdown-rendered .callout[data-callout="summary"],
 .theme-light .markdown-rendered .callout[data-callout="tldr"],
 .theme-light .markdown-rendered .callout[data-callout="tip"],
 .theme-light .markdown-rendered .callout[data-callout="hint"],
-.theme-light .markdown-rendered .callout[data-callout="important"] { --callout-color: 74, 99, 96; }
+.theme-light .markdown-rendered .callout[data-callout="important"] { --callout-color: rgb(74, 99, 96); }
 .theme-light .markdown-rendered .callout[data-callout="success"],
 .theme-light .markdown-rendered .callout[data-callout="check"],
-.theme-light .markdown-rendered .callout[data-callout="done"]      { --callout-color: 99, 128, 66; }
+.theme-light .markdown-rendered .callout[data-callout="done"]      { --callout-color: rgb(99, 128, 66); }
 .theme-light .markdown-rendered .callout[data-callout="question"],
 .theme-light .markdown-rendered .callout[data-callout="help"],
-.theme-light .markdown-rendered .callout[data-callout="faq"]       { --callout-color: 184, 132, 62; }
+.theme-light .markdown-rendered .callout[data-callout="faq"]       { --callout-color: rgb(184, 132, 62); }
 .theme-light .markdown-rendered .callout[data-callout="warning"],
 .theme-light .markdown-rendered .callout[data-callout="caution"],
-.theme-light .markdown-rendered .callout[data-callout="attention"] { --callout-color: 184, 116, 52; }
+.theme-light .markdown-rendered .callout[data-callout="attention"] { --callout-color: rgb(184, 116, 52); }
 .theme-light .markdown-rendered .callout[data-callout="failure"],
 .theme-light .markdown-rendered .callout[data-callout="fail"],
 .theme-light .markdown-rendered .callout[data-callout="missing"],
 .theme-light .markdown-rendered .callout[data-callout="danger"],
 .theme-light .markdown-rendered .callout[data-callout="error"],
-.theme-light .markdown-rendered .callout[data-callout="bug"]       { --callout-color: 168, 86, 68; }
-.theme-light .markdown-rendered .callout[data-callout="example"]   { --callout-color: 122, 104, 150; }
+.theme-light .markdown-rendered .callout[data-callout="bug"]       { --callout-color: rgb(168, 86, 68); }
+.theme-light .markdown-rendered .callout[data-callout="example"]   { --callout-color: rgb(122, 104, 150); }
 
 /* ============================================================
    Mobile — opaque tab options overlay (dark mode)
